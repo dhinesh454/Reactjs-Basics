@@ -1,25 +1,27 @@
 
 import './ExpenseItem.css';
+import ExpenseDate from './ExpenseDate'; 
+import Card from './Card';
 
 
-function ExpenseItem () {
-
+function ExpenseItem (props) {
+    // <div>{props.date.toLocaleString('en-US',{weekday:'long',month:'long',year:'numeric',day:'numeric'})}</div>
+    
+   
     return (
-<div className='container'>
- <h1>Expense Items</h1>
 
-<div className='expense-item'>
-<div>March 28th 2021</div>
 
+<Card className='expense-item'>
+<ExpenseDate date={props.date}/>
 <div className='expense-item__description'>
-<h2>Car Insurance</h2>
-<div className='expense-item__price'>$294.67</div>
+<h2>{props.title}</h2>
+<div className='expense-item__price'>{props.amount}</div>
 </div>
 
 
-</div>
+</Card>
 
-</div>
+
 
 
 
