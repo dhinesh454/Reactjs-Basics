@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import ExpenseItem from './components/ExpenseItem';
-import Expenses from './components/Expenses';
-import ExpenseDate from './components/ExpenseDate';
+import ExpenseItem from './components/Expenses/ExpenseItem';
+import Expenses from './components/Expenses/Expenses';
+import ExpenseDate from './components/Expenses/ExpenseDate';
 
 
-function App() {
+const App =() =>{
 
   const expenses=[
     {id:1,title:'Car Insurance',amount:'$294.96',date:new Date()},
@@ -18,28 +18,28 @@ function App() {
 
 
 
-return (
+// return (
 
-  React.createElement('div',{className:'App'},
-  React.createElement('h1',{},'Expenses Items'),
-  React.createElement(Expenses,{items:expenses})
-  )
-)
+//   React.createElement('div',{className:'App'},
+//   React.createElement('h1',{},'Expenses Items'),
+//   React.createElement(Expenses,{items:expenses})
+//   )
+// )
 
 
-  // return (
+  return (
 
-  //   <div className="App">
-  //   <h1>Expense Items</h1>
+    <div className="App">
+    <h1>Expense Items</h1>
 
-  //   <Expenses items={expenses}/>
+    <Expenses items={expenses}/>
 
 
 
       
      
-  //   </div>
-  // );
+    </div>
+  );
 }
 
 export default App;

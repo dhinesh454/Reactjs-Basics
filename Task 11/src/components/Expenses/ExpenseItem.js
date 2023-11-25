@@ -1,10 +1,10 @@
 
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate'; 
-import Card from './Card';
+import Card from '../UI/Card';
 
 
-function ExpenseItem (props) {
+const ExpenseItem = (props) => {
     // <div>{props.date.toLocaleString('en-US',{weekday:'long',month:'long',year:'numeric',day:'numeric'})}</div>
     
    
